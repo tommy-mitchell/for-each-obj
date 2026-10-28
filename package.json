@@ -1,6 +1,6 @@
 {
 	"name": "for-each-obj",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Deeply traverse an object's keys and values.",
 	"license": "MIT",
 	"repository": "tommy-mitchell/for-each-obj",
