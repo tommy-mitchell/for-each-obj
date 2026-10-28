@@ -1,0 +1,66 @@
+{
+	"name": "for-each-obj",
+	"version": "0.0.0",
+	"description": "Deeply traverse an object's keys and values.",
+	"license": "MIT",
+	"repository": "tommy-mitchell/for-each-obj",
+	"author": "Tommy Mitchell (https://tommymitchell.io)",
+	"type": "module",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"default": "./dist/index.js"
+	},
+	"imports": {
+		"#src/*.ts": "./src/*.ts"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"build": "tsdown",
+		"prepack": "npm pkg delete imports scripts devDependencies ava",
+		"lint": "run-all 'dprint check' xo",
+		"format": "dprint fmt && xo --fix",
+		"test": "c8 ava && tsd test-d"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"object",
+		"key",
+		"keys",
+		"value",
+		"values",
+		"entry",
+		"entries",
+		"iterate",
+		"iterator",
+		"deep",
+		"traverse",
+		"recurse",
+		"recursive",
+		"nested"
+	],
+	"devDependencies": {
+		"@tommy-mitchell/configs": "^0.5.0",
+		"@tommy-mitchell/test-helpers": "^0.2.0",
+		"@types/node": "^22",
+		"ava": "^8.2.0",
+		"c8": "^12.0.0",
+		"dprint": "^0.64.3",
+		"run-all-cli": "^0.1.0",
+		"test-quadruple": "^1.1.0",
+		"tsd": "^0.33.0",
+		"tsdown": "^0.23.3",
+		"type-fest": "^5.10.0",
+		"typescript": "~6.0.3",
+		"xo": "^5.0.1"
+	},
+	"ava": {
+		"extensions": [
+			"ts"
+		]
+	}
+}

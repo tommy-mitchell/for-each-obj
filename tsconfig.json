@@ -1,0 +1,7 @@
+{
+	"extends": "@tommy-mitchell/configs/ts/node",
+	"include": ["src", "test", "test-d"],
+	"compilerOptions": {
+		"noEmit": true,
+	},
+}
